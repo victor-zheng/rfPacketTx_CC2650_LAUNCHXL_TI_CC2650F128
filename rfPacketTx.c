@@ -111,7 +111,7 @@ static void txTaskFunction(UArg arg0, UArg arg1)
     RF_Params rfParams;
     RF_Params_init(&rfParams);
 
-    RF_cmdPropTx.pktLen = PAYLOAD_LENGTH;
+    RF_cmdPropTx.pktLen = 0x10;
     RF_cmdPropTx.pPkt = packet;
     RF_cmdPropTx.startTrigger.triggerType = TRIG_ABSTIME;
     RF_cmdPropTx.startTrigger.pastTrig = 1;
@@ -128,12 +128,12 @@ static void txTaskFunction(UArg arg0, UArg arg1)
     while(1)
     {
         /* Create packet with incrementing sequence number and random payload */
-        packet[0] = (uint8_t)(seqNumber >> 8);
-        packet[1] = (uint8_t)(seqNumber++);
+//        packet[0] = (uint8_t)(seqNumber >> 8);
+//       packet[1] = (uint8_t)(seqNumber++);
         uint8_t i;
-        for (i = 2; i < PAYLOAD_LENGTH; i++)
+        for (i = 0; i < 16; i++)
         {
-            packet[i] = rand();
+            packet[i] = i;
         }
 
         /* Set absolute TX time to utilize automatic power management */
