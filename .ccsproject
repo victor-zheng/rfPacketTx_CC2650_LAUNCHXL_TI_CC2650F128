@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?ccsproject version="1.0"?>
+<projectOptions>
+	<deviceVariant value="Cortex M.CC2650F128"/>
+	<deviceFamily value="TMS470"/>
+	<deviceEndianness value="little"/>
+	<codegenToolVersion value="15.12.1.LTS"/>
+	<isElfFormat value="true"/>
+	<rts value="libc.a"/>
+	<createSlaveProjects value=""/>
+	<templateProperties value="id=com_ti_rtsc_tirtoscc13XX_CC26XX_example_255.projectspec.rfPacketTx_CC2650_LAUNCHXL_TI_CC2650F128,type=rtsc,products=com.ti.rtsc.TIRTOSCC13XX_CC26XX,xdcToolsVersion=3_32_00_06_core,target=ti.targets.arm.elf.M3,platform=ti.platforms.simplelink:CC2650F128,buildProfile=release,isHybrid=true,configuroOptions= --compileOptions &quot;${COMPILER_FLAGS} &quot;,"/>
+	<origin value="C:\ti\tirtos_cc13xx_cc26xx_2_21_00_06\resources\cc2650LaunchPad\driverExamples\tiDriverExamples\rfExamples\com_ti_rtsc_tirtoscc13XX_CC26XX_example_255.projectspec"/>
+	<filesToOpen value=""/>
+</projectOptions>
