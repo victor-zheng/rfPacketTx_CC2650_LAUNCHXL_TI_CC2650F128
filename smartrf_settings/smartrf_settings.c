@@ -44,8 +44,8 @@ RF_Mode RF_prop =
 };
 
 
-uint32_t shape[] = {0x00000000, 0x00000000, 0x00000000, 0x360c0100, 0xacaba076, 0xacacacac};
-
+//uint32_t shape[] = {0x00000000, 0x00000000, 0x00000000, 0x360c0100, 0xacaba076, 0xacacacac};
+uint32_t shape[] = {0x00000000, 0x03020100, 0x160F0A06, 0x46382B20, 0x7B706355, 0x918F8B84};
 
 // Overrides for CMD_PROP_RADIO_SETUP
 uint32_t pOverrides[] = {
@@ -92,9 +92,9 @@ rfc_CMD_PROP_RADIO_SETUP_t RF_cmdPropRadioDivSetup =
     .condition.nSkip = 0x0,
     .modulation.modType = 0x1,
     .modulation.deviation = 744,
-    .symbolRate.preScale = 30,
-    .symbolRate.rateWord = 131072,
-    .rxBw = 9,
+    .symbolRate.preScale = 15,
+    .symbolRate.rateWord = 65536,
+    .rxBw = 10,
     .preamConf.nPreamBytes = 0x4,
     .preamConf.preamMode = 0x2,
     .formatConf.nSwBits = 32,
@@ -146,7 +146,8 @@ rfc_CMD_PROP_TX_t RF_cmdPropTx =
     .pktConf.bUseCrc = 0x1,
     .pktConf.bVarLen = 0x0,
     .pktLen = 0x10, // SET APPLICATION PAYLOAD LENGTH
-    .syncWord = 0x52567853,
+	.syncWord = 0x954e954e,
+//    .syncWord = 0x52567853,
     .pPkt = 0, // INSERT APPLICABLE POINTER: (uint8_t*)&xxx
 };
 
